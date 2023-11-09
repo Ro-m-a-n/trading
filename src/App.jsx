@@ -1,5 +1,6 @@
 import { BigInvest } from "./components/bigInvest/bigInvest";
 import { ContactUs } from "./components/contactUs/contactUs";
+import { Footer } from "./components/footer/footer";
 import { GetStart } from "./components/getStart/getStart";
 import { NavBar } from "./components/navBar/navBar";
 import { Questions } from "./components/questions/questions";
@@ -14,9 +15,8 @@ const App = () => {
       <BigInvest />
       <Questions />
       <ContactUs />
-      {/* <Form />
       <Footer />
-      <Rights /> */}
+      {/* <Rights /> */}
     </>
   );
 };

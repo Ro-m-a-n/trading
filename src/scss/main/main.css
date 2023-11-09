@@ -241,11 +241,12 @@ button {
 .form_wrap button:hover {
   background-color: #7181fc;
 }
-.form_wrap button:disabled {
-  background-color: #e0e0e0;
-}
 .form_wrap button:active {
   background-color: #354bf4;
+}
+.form_wrap button:disabled {
+  color: #828282;
+  background-color: #e0e0e0;
 }
 .form_wrap input,
 .form_wrap textarea {
@@ -273,4 +274,43 @@ button {
 }
 .form_wrap .text_error {
   color: red;
+}
+
+.footer_wrap {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_wrap img {
+  width: 90px;
+}
+.footer_wrap .linksGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer_wrap .linksGroup a {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.footer_wrap .infoText,
+.footer_wrap .disclaimer {
+  margin-top: 30px;
+}
+.footer_wrap .infoText p,
+.footer_wrap .disclaimer p {
+  margin-top: 20px;
+}
+.footer_wrap .copyrightsGroup {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_wrap .copyrightsGroup a {
+  margin-top: 30px;
+  color: #828282;
 }/*# sourceMappingURL=main.css.map */

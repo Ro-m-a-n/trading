@@ -14,11 +14,13 @@
     &:hover {
       background-color: $color8;
     }
-    &:disabled {
-      background-color: $color6;
-    }
+
     &:active {
       background-color: $color7;
+    }
+    &:disabled {
+      color: $color10;
+      background-color: $color6;
     }
   }
 
