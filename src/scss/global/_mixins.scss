@@ -1,0 +1,11 @@
+@import "./colors";
+@mixin button($width) {
+  margin-top: 30px;
+  background-color: $color1;
+  color: white;
+  width: $width;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+}

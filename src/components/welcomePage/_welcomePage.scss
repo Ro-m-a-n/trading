@@ -1,0 +1,21 @@
+@import "../../scss/global/colors";
+@import "../../scss/global/mixins";
+.welcomePage_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: $color4;
+  box-sizing: border-box;
+  width: 100vw;
+  p {
+    margin-top: 30px;
+    font-size: 1.4em;
+  }
+  button {
+    @include button(280px);
+  }
+  img {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+.navBar_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  height: 100px;
+  padding: 5px 5vw;
+}
+.navBar_wrap .navBar_logo {
+  width: 90px;
+}
+.navBar_wrap .navBar_menu {
+  height: 30px;
+  width: auto;
+}
+
+.welcomePage_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: rgb(237, 246, 248);
+  box-sizing: border-box;
+  width: 100vw;
+}
+.welcomePage_wrap p {
+  margin-top: 30px;
+  font-size: 1.4em;
+}
+.welcomePage_wrap button {
+  margin-top: 30px;
+  background-color: #4f62f6;
+  color: white;
+  width: 280px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.welcomePage_wrap img {
+  margin-top: 50px;
+}
+
+.getStart_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.stage_wrap {
+  margin-top: 20px;
+  width: 280px;
+  padding: 24px;
+  border-radius: 30px;
+  border: 2px solid #4f62f6;
+}
+.stage_wrap .stage_number {
+  color: #4f62f6;
+}
+.stage_wrap h3 {
+  font-size: 1.4em;
+  color: #333333;
+}
+.stage_wrap p {
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+
+.bigInvest_wrap {
+  padding: 30px 20px;
+}
+.bigInvest_wrap .cardNavigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bigInvest_wrap .icon_navigation {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  box-sizing: content-box;
+  padding: 14px;
+}
+.bigInvest_wrap .cardDisplayed_number {
+  color: #4f62f6;
+}
+
+.feedbackCard_wrap {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feedbackCard_wrap .feedbackCard_userPhoto {
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+}
+.feedbackCard_wrap .feedbackCard_quotes {
+  margin-top: 20px;
+  width: 33px;
+  height: 27px;
+  color: #4f62f6;
+}
+.feedbackCard_wrap h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.questions_wrap {
+  padding: 30px 20px;
+}
+
+.questionCard_wrap {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 15px;
+  border: 2px solid #4f62f6;
+}
+.questionCard_wrap .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questionCard_wrap .toOpen {
+  height: 32px;
+  width: 32px;
+}
+.questionCard_wrap .toClose {
+  height: 32px;
+  width: 32px;
+}
+
+.contactUs_wrap {
+  padding: 30px 20px;
+  background-color: rgb(237, 246, 248);
+}
+.contactUs_wrap h4 {
+  margin-top: 15px;
+}
+
+.form_wrap {
+  margin-top: 30px;
+  padding: 10px 20px 30px 20px;
+  border: 2px solid #4f62f6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form_wrap button {
+  margin-top: 30px;
+  background-color: #4f62f6;
+  color: white;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.form_wrap .input_wrap {
+  width: 100%;
+}
+.form_wrap .input_wrap input {
+  margin-top: 30px;
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid rgb(170, 170, 170);
+  padding: 0 15px;
+}
+.form_wrap .input_wrap input:focus {
+  outline: none;
+  border-color: black;
+}
+.form_wrap .input_wrap input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+.form_wrap .input_wrap input::placeholder {
+  color: rgb(170, 170, 170);
+}
+.form_wrap .input_wrap .message {
+  height: 90px;
+}
+.form_wrap .input_wrap .text_error {
+  color: red;
+}/*# sourceMappingURL=main.css.map */

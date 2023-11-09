@@ -1,0 +1,19 @@
+@import "../../../scss/global/colors";
+.stage_wrap {
+  margin-top: 20px;
+  width: 280px;
+  padding: 24px;
+  border-radius: 30px;
+  border: 2px solid $color1;
+  .stage_number {
+    color: $color1;
+  }
+  h3 {
+    font-size: 1.4em;
+    color: $color2;
+  }
+  p {
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../scss/global/colors";
+.bigInvest_wrap {
+  padding: 30px 20px;
+  .cardNavigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon_navigation {
+    height: 20px;
+    width: 20px;
+    border: 1px solid $color3;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 14px;
+  }
+  .cardDisplayed_number {
+    color: $color1;
+  }
+}
