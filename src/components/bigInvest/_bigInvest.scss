@@ -1,6 +1,23 @@
 @import "../../scss/global/colors";
+@import "../../scss/global/brakepoints";
 .bigInvest_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
+  position: relative;
+  @include media(">=desktop") {
+    padding: 30px 60px;
+  }
+  .investBG {
+    position: absolute;
+    top: 95px;
+    width: 300px;
+    height: 50px;
+    background-color: $color4;
+    z-index: -1;
+  }
+  h1 {
+    max-width: 500px;
+  }
+
   .cardNavigation {
     margin-top: 20px;
     display: flex;
@@ -16,6 +33,6 @@
     padding: 14px;
   }
   .cardDisplayed_number {
-    color: $color1;
+    color: $color4;
   }
 }

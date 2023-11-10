@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { QuestionCard } from "./questionCard/questionCard";
+import { useStore } from "../../store/store";
 
-export const Questions = (props) => {
-  const questionArray = [
-    { question: "question 1", answer: "answer 1" },
-    { question: "question 2", answer: "answer 2" },
-  ];
+export const Questions = () => {
+  const questions = useStore((state) => state.question);
   const [currentCard, setCurrentCard] = useState(null);
-  const questionCards = questionArray.map((item, index) => {
+  const questionCards = questions.map((item, index) => {
     return (
       <QuestionCard
         question={item.question}

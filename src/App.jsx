@@ -16,7 +16,6 @@ const App = () => {
       <Questions />
       <ContactUs />
       <Footer />
-      {/* <Rights /> */}
     </>
   );
 };

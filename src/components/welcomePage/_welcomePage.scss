@@ -1,21 +1,36 @@
 @import "../../scss/global/colors";
 @import "../../scss/global/mixins";
+@import "../../scss/global/brakepoints";
 .welcomePage_wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 30px;
   background-color: $color4;
-  box-sizing: border-box;
-  width: 100vw;
+  @include media(">=tablet", "<desktop") {
+    text-align: center;
+  }
+  @include media(">=desktop") {
+    padding: 30px 60px;
+    flex-direction: row;
+    .text_group {
+      text-align: left;
+    }
+  }
   p {
     margin-top: 30px;
     font-size: 1.4em;
+    @include media(">=desktop") {
+      width: 60%;
+    }
   }
   button {
     @include button(280px);
   }
   img {
     margin-top: 50px;
+    @include media(">=desktop") {
+      margin: 50px;
+    }
   }
 }

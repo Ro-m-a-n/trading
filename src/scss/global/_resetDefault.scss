@@ -47,6 +47,11 @@ ol[class] {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+a {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: inherit;
+}
 
 /* Упрощаем работу с изображениями */
 img {

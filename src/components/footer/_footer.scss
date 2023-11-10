@@ -1,9 +1,14 @@
 @import "../../scss/global/colors";
+@import "../../scss/global/brakepoints";
+
 .footer_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media(">=desktop") {
+    padding: 30px 60px;
+  }
   img {
     width: 90px;
   }

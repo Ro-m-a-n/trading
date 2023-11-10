@@ -1,6 +1,11 @@
+@import "../../scss/global/brakepoints";
 .getStart_wrap {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 30px;
+  @include media(">=desktop") {
+    padding: 30px 60px;
+  }
 }

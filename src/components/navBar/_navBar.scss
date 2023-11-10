@@ -1,15 +1,76 @@
+@import "../../scss/global/colors";
+@import "../../scss/global/mixins";
+@import "../../scss/global/brakepoints";
 .navBar_wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  height: 100px;
-  padding: 5px 5vw;
-  .navBar_logo {
+  height: 80px;
+  padding: 5px 30px;
+  @include media(">=desktop") {
+    padding: 5px 60px;
+  }
+
+  .logo {
     width: 90px;
   }
-  .navBar_menu {
-    height: 30px;
-    width: auto;
+  .buttonsMenu_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .signUp_button {
+      @include button(167px, 40px, 0);
+      font-size: 14px;
+      display: none;
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+    .burger {
+      margin-left: 40px;
+      height: 30px;
+      width: auto;
+      @include media(">=desktop") {
+        display: none;
+      }
+    }
+  }
+  .desktopMenu {
+    display: none;
+    @include media(">=desktop") {
+      display: block;
+      width: 100%;
+      button {
+        position: absolute;
+        right: 230px;
+      }
+    }
+  }
+  .mobileMenu {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: calc(100vh - 100px);
+    @include media(">=desktop") {
+      display: none;
+    }
+    .menu_links {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  a {
+    color: $color11;
+    @include media(">=desktop") {
+      color: $color2;
+      margin-left: 40px;
+    }
   }
 }

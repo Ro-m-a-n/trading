@@ -50,6 +50,12 @@ a:not([class]) {
           text-decoration-skip-ink: auto;
 }
 
+a {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: inherit;
+}
+
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
@@ -78,29 +84,121 @@ button {
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  height: 100px;
-  padding: 5px 5vw;
+  height: 80px;
+  padding: 5px 30px;
 }
-.navBar_wrap .navBar_logo {
+@media (min-width: 1440px) {
+  .navBar_wrap {
+    padding: 5px 60px;
+  }
+}
+.navBar_wrap .logo {
   width: 90px;
 }
-.navBar_wrap .navBar_menu {
+.navBar_wrap .buttonsMenu_group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBar_wrap .buttonsMenu_group .signUp_button {
+  margin-top: 0;
+  background-color: #4f62f6;
+  color: white;
+  width: 167px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .navBar_wrap .buttonsMenu_group .signUp_button {
+    display: block;
+  }
+}
+.navBar_wrap .buttonsMenu_group .burger {
+  margin-left: 40px;
   height: 30px;
   width: auto;
+}
+@media (min-width: 1440px) {
+  .navBar_wrap .buttonsMenu_group .burger {
+    display: none;
+  }
+}
+.navBar_wrap .desktopMenu {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .navBar_wrap .desktopMenu {
+    display: block;
+    width: 100%;
+  }
+  .navBar_wrap .desktopMenu button {
+    position: absolute;
+    right: 230px;
+  }
+}
+.navBar_wrap .mobileMenu {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  height: calc(100vh - 100px);
+}
+@media (min-width: 1440px) {
+  .navBar_wrap .mobileMenu {
+    display: none;
+  }
+}
+.navBar_wrap .mobileMenu .menu_links {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.navBar_wrap a {
+  color: white;
+}
+@media (min-width: 1440px) {
+  .navBar_wrap a {
+    color: #333333;
+    margin-left: 40px;
+  }
 }
 
 .welcomePage_wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 30px;
   background-color: rgb(237, 246, 248);
-  box-sizing: border-box;
-  width: 100vw;
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .welcomePage_wrap {
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .welcomePage_wrap {
+    padding: 30px 60px;
+    flex-direction: row;
+  }
+  .welcomePage_wrap .text_group {
+    text-align: left;
+  }
 }
 .welcomePage_wrap p {
   margin-top: 30px;
   font-size: 1.4em;
+}
+@media (min-width: 1440px) {
+  .welcomePage_wrap p {
+    width: 60%;
+  }
 }
 .welcomePage_wrap button {
   margin-top: 30px;
@@ -109,18 +207,29 @@ button {
   width: 280px;
   height: 60px;
   border-radius: 30px;
-  font-size: 1.2em;
+  font-size: 16px;
   font-weight: 500;
 }
 .welcomePage_wrap img {
   margin-top: 50px;
 }
+@media (min-width: 1440px) {
+  .welcomePage_wrap img {
+    margin: 50px;
+  }
+}
 
 .getStart_wrap {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 30px;
+}
+@media (min-width: 1440px) {
+  .getStart_wrap {
+    padding: 30px 60px;
+  }
 }
 
 .stage_wrap {
@@ -143,7 +252,24 @@ button {
 }
 
 .bigInvest_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .bigInvest_wrap {
+    padding: 30px 60px;
+  }
+}
+.bigInvest_wrap .investBG {
+  position: absolute;
+  top: 95px;
+  width: 300px;
+  height: 50px;
+  background-color: rgb(237, 246, 248);
+  z-index: -1;
+}
+.bigInvest_wrap h1 {
+  max-width: 500px;
 }
 .bigInvest_wrap .cardNavigation {
   margin-top: 20px;
@@ -160,7 +286,7 @@ button {
   padding: 14px;
 }
 .bigInvest_wrap .cardDisplayed_number {
-  color: #4f62f6;
+  color: rgb(237, 246, 248);
 }
 
 .feedbackCard_wrap {
@@ -188,7 +314,12 @@ button {
 }
 
 .questions_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
+}
+@media (min-width: 1440px) {
+  .questions_wrap {
+    padding: 30px 60px;
+  }
 }
 
 .questionCard_wrap {
@@ -212,8 +343,13 @@ button {
 }
 
 .contactUs_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
   background-color: rgb(237, 246, 248);
+}
+@media (min-width: 1440px) {
+  .contactUs_wrap {
+    padding: 30px 60px;
+  }
 }
 .contactUs_wrap h4 {
   margin-top: 15px;
@@ -235,7 +371,7 @@ button {
   width: 200px;
   height: 60px;
   border-radius: 30px;
-  font-size: 1.2em;
+  font-size: 16px;
   font-weight: 500;
 }
 .form_wrap button:hover {
@@ -277,10 +413,15 @@ button {
 }
 
 .footer_wrap {
-  padding: 30px 20px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1440px) {
+  .footer_wrap {
+    padding: 30px 60px;
+  }
 }
 .footer_wrap img {
   width: 90px;
