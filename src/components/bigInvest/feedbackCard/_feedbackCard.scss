@@ -4,21 +4,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .feedbackCard_userPhoto {
+  max-width: 508px;
+
+  @include media(">=desktop") {
+    margin-top: 50px;
+  }
+
+  .userPhoto {
     width: 73px;
     height: 73px;
     border-radius: 50%;
+    @include media(">=desktop") {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+    }
   }
-  .feedbackCard_quotes {
+  .aboutUser {
+    text-align: center;
+    margin-top: 10px;
+    @include media(">=desktop") {
+      position: relative;
+      right: 70px;
+      bottom: 8px;
+      text-align: left;
+    }
+  }
+  .quotes {
     margin-top: 20px;
     width: 33px;
     height: 27px;
     color: $color1;
+    @include media(">=desktop") {
+      position: absolute;
+      top: 50px;
+      left: -45px;
+    }
   }
   h3 {
     margin-top: 20px;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
+    @include media(">=desktop") {
+      text-align: left;
+    }
   }
 }

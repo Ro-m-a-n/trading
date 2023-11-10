@@ -244,11 +244,18 @@ div {
   align-items: center;
   padding: 30px 30px;
   max-width: 1600px;
-  background-color: aquamarine;
-  height: -moz-min-content;
-  height: min-content;
 }
 @media (min-width: 768px) {
+  .getStart_wrap {
+    height: 1030px;
+  }
+}
+@media (min-width: 860px) {
+  .getStart_wrap {
+    height: 980px;
+  }
+}
+@media (min-width: 910px) {
   .getStart_wrap {
     height: 920px;
   }
@@ -257,6 +264,9 @@ div {
   .getStart_wrap {
     height: 870px;
   }
+}
+.getStart_wrap h1 {
+  align-self: flex-start;
 }
 .getStart_wrap .stage_group {
   max-width: 1090px;
@@ -340,39 +350,93 @@ div {
   padding: 30px 30px;
   position: relative;
   max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1440px) {
   .bigInvest_wrap {
     padding: 30px 60px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .bigInvest_wrap .investBG {
   position: absolute;
   top: 75px;
+  left: 30px;
   width: 250px;
   height: 50px;
   background-color: rgba(99, 72, 255, 0.0901960784);
   z-index: -1;
 }
+@media (min-width: 768px) {
+  .bigInvest_wrap .investBG {
+    top: 105px;
+    height: 65px;
+  }
+}
+@media (min-width: 1440px) {
+  .bigInvest_wrap .investBG {
+    left: 60px;
+  }
+}
 .bigInvest_wrap h1 {
   max-width: 500px;
+  align-self: flex-start;
 }
-.bigInvest_wrap .cardNavigation {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (max-width: 767px) {
+  .bigInvest_wrap h1 {
+    max-width: 400px;
+  }
 }
-.bigInvest_wrap .icon_navigation {
+.bigInvest_wrap .navigation_icon {
   height: 20px;
   width: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 50%;
   box-sizing: content-box;
   padding: 14px;
+  position: absolute;
 }
-.bigInvest_wrap .cardDisplayed_number {
+.bigInvest_wrap .navigation_icon.left {
+  bottom: -40px;
+  left: 30px;
+}
+.bigInvest_wrap .navigation_icon.right {
+  bottom: -40px;
+  right: 30px;
+}
+@media (min-width: 768px) {
+  .bigInvest_wrap .navigation_icon.left {
+    bottom: 200px;
+    left: 30px;
+  }
+  .bigInvest_wrap .navigation_icon.right {
+    bottom: 200px;
+    right: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .bigInvest_wrap .navigation_icon.left {
+    top: 200px;
+    left: 60px;
+  }
+  .bigInvest_wrap .navigation_icon.right {
+    top: 200px;
+    left: 130px;
+  }
+}
+.bigInvest_wrap .currentCardNumber {
+  position: absolute;
+  bottom: -30px;
   color: #4f62f6;
+}
+@media (min-width: 1440px) {
+  .bigInvest_wrap .currentCardNumber {
+    right: 520px;
+    bottom: -10px;
+  }
 }
 
 .feedbackCard_wrap {
@@ -380,17 +444,49 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 508px;
 }
-.feedbackCard_wrap .feedbackCard_userPhoto {
+@media (min-width: 1440px) {
+  .feedbackCard_wrap {
+    margin-top: 50px;
+  }
+}
+.feedbackCard_wrap .userPhoto {
   width: 73px;
   height: 73px;
   border-radius: 50%;
 }
-.feedbackCard_wrap .feedbackCard_quotes {
+@media (min-width: 1440px) {
+  .feedbackCard_wrap .userPhoto {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+  }
+}
+.feedbackCard_wrap .aboutUser {
+  text-align: center;
+  margin-top: 10px;
+}
+@media (min-width: 1440px) {
+  .feedbackCard_wrap .aboutUser {
+    position: relative;
+    right: 70px;
+    bottom: 8px;
+    text-align: left;
+  }
+}
+.feedbackCard_wrap .quotes {
   margin-top: 20px;
   width: 33px;
   height: 27px;
   color: #4f62f6;
+}
+@media (min-width: 1440px) {
+  .feedbackCard_wrap .quotes {
+    position: absolute;
+    top: 50px;
+    left: -45px;
+  }
 }
 .feedbackCard_wrap h3 {
   margin-top: 20px;
@@ -398,8 +494,14 @@ div {
   font-weight: 500;
   text-align: center;
 }
+@media (min-width: 1440px) {
+  .feedbackCard_wrap h3 {
+    text-align: left;
+  }
+}
 
 .questions_wrap {
+  margin-top: 40px;
   padding: 30px 30px;
   max-width: 1600px;
 }
@@ -451,6 +553,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 .form_wrap button {
   margin-top: 30px;

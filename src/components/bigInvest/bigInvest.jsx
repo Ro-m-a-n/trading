@@ -34,17 +34,16 @@ export const BigInvest = () => {
         position={currentFeedback.position}
         feedback={currentFeedback.feedback}
       />
-      <div className="cardNavigation">
-        <LiaLessThanSolid
-          className="icon_navigation"
-          onClick={() => prevFeedback()}
-        />
-        <div className="cardDisplayed_number">{currentStatus()}</div>
-        <LiaGreaterThanSolid
-          className="icon_navigation"
-          onClick={() => nextFeedback()}
-        />
-      </div>
+
+      <LiaLessThanSolid
+        className="navigation_icon left"
+        onClick={() => prevFeedback()}
+      />
+      <div className="currentCardNumber">{currentStatus()}</div>
+      <LiaGreaterThanSolid
+        className="navigation_icon right"
+        onClick={() => nextFeedback()}
+      />
     </div>
   );
 };

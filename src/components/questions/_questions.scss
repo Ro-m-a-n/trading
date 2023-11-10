@@ -1,5 +1,6 @@
 @import "../../scss/global/brakepoints";
 .questions_wrap {
+  margin-top: 40px;
   padding: 30px 30px;
   max-width: 1600px;
   @include media(">=desktop") {

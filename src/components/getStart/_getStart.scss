@@ -6,13 +6,21 @@
   align-items: center;
   padding: 30px 30px;
   max-width: 1600px;
-  background-color: aquamarine;
-  height: min-content;
+
   @include media(">=tablet") {
+    height: 1030px;
+  }
+  @include media(">=860px") {
+    height: 980px;
+  }
+  @include media(">=910px") {
     height: 920px;
   }
   @include media(">=desktop") {
     height: 870px;
+  }
+  h1 {
+    align-self: flex-start;
   }
   .stage_group {
     max-width: 1090px;

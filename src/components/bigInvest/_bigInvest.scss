@@ -5,36 +5,85 @@
   padding: 30px 30px;
   position: relative;
   max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include media(">=desktop") {
     padding: 30px 60px;
+    flex-direction: row;
+    justify-content: space-between;
   }
+
   .investBG {
     position: absolute;
     top: 75px;
+    left: 30px;
     width: 250px;
     height: 50px;
     background-color: $color4;
     z-index: -1;
+    @include media(">=tablet") {
+      top: 105px;
+      height: 65px;
+    }
+    @include media(">=desktop") {
+      left: 60px;
+    }
   }
   h1 {
     max-width: 500px;
+    align-self: flex-start;
+    @include media("<tablet") {
+      max-width: 400px;
+    }
   }
 
-  .cardNavigation {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .icon_navigation {
+  .navigation_icon {
     height: 20px;
     width: 20px;
     border: 1px solid $color3;
     border-radius: 50%;
     box-sizing: content-box;
     padding: 14px;
+    position: absolute;
+    &.left {
+      bottom: -40px;
+      left: 30px;
+    }
+    &.right {
+      bottom: -40px;
+      right: 30px;
+    }
+    @include media(">=tablet") {
+      &.left {
+        bottom: 200px;
+        left: 30px;
+      }
+      &.right {
+        bottom: 200px;
+        right: 30px;
+      }
+    }
+    @include media(">=desktop") {
+      &.left {
+        top: 200px;
+        left: 60px;
+      }
+      &.right {
+        top: 200px;
+        left: 130px;
+      }
+    }
   }
-  .cardDisplayed_number {
+
+  .currentCardNumber {
+    position: absolute;
+    bottom: -30px;
     color: $color1;
+    @include media(">=desktop") {
+      right: 520px;
+      bottom: -10px;
+    }
   }
 }
