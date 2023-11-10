@@ -3,6 +3,7 @@
 .contactUs_wrap {
   padding: 30px 30px;
   background-color: $color4;
+  max-width: 1600px;
   @include media(">=desktop") {
     padding: 30px 60px;
   }

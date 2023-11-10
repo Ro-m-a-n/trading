@@ -5,6 +5,73 @@
   flex-direction: column;
   align-items: center;
   padding: 30px 30px;
+  max-width: 1600px;
+
+  @include media(">=tablet") {
+    height: 920px;
+  }
+  @include media(">=desktop") {
+    height: 870px;
+  }
+  .stage_group {
+    max-width: 1300px;
+    img {
+      display: none;
+    }
+    @include media(">=tablet") {
+      img {
+        display: block;
+      }
+      display: grid;
+      grid-template:
+        "a b"
+        "c d";
+      width: 100%;
+      position: relative;
+      .gridA {
+        grid-area: "a";
+        max-width: 500px;
+      }
+      .gridB {
+        grid-area: "b";
+        top: 100px;
+        margin-left: 6vw;
+        max-width: 500px;
+        img {
+          position: relative;
+          right: 50%;
+          top: 20px;
+          z-index: -1;
+        }
+      }
+      .gridC {
+        grid-area: "c";
+        bottom: 40px;
+        max-width: 500px;
+
+        img {
+          position: relative;
+          left: 50%;
+          top: 20px;
+          z-index: -1;
+        }
+      }
+      .gridD {
+        grid-area: "d";
+        top: 140px;
+        margin-left: 6vw;
+        max-width: 500px;
+
+        img {
+          position: relative;
+          right: 50%;
+          top: 20px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
   @include media(">=desktop") {
     padding: 30px 60px;
   }

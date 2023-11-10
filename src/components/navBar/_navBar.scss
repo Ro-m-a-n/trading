@@ -8,6 +8,7 @@
   min-height: 60px;
   height: 80px;
   padding: 5px 30px;
+  max-width: 1600px;
   @include media(">=desktop") {
     padding: 5px 60px;
   }
@@ -41,10 +42,11 @@
     display: none;
     @include media(">=desktop") {
       display: block;
+      position: relative;
       width: 100%;
       button {
         position: absolute;
-        right: 230px;
+        right: 50px;
       }
     }
   }

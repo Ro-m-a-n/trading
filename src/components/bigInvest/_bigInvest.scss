@@ -1,8 +1,10 @@
 @import "../../scss/global/colors";
 @import "../../scss/global/brakepoints";
 .bigInvest_wrap {
+  margin-top: 30px;
   padding: 30px 30px;
   position: relative;
+  max-width: 1600px;
   @include media(">=desktop") {
     padding: 30px 60px;
   }

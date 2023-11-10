@@ -79,6 +79,10 @@ button {
   border: none;
 }
 
+div {
+  position: inherit;
+}
+
 .navBar_wrap {
   display: flex;
   align-items: center;
@@ -86,6 +90,7 @@ button {
   min-height: 60px;
   height: 80px;
   padding: 5px 30px;
+  max-width: 1600px;
 }
 @media (min-width: 1440px) {
   .navBar_wrap {
@@ -133,11 +138,12 @@ button {
 @media (min-width: 1440px) {
   .navBar_wrap .desktopMenu {
     display: block;
+    position: relative;
     width: 100%;
   }
   .navBar_wrap .desktopMenu button {
     position: absolute;
-    right: 230px;
+    right: 50px;
   }
 }
 .navBar_wrap .mobileMenu {
@@ -176,6 +182,7 @@ button {
   align-items: center;
   padding: 30px 30px;
   background-color: rgb(237, 246, 248);
+  max-width: 1600px;
 }
 @media (min-width: 768px) and (max-width: 1439px) {
   .welcomePage_wrap {
@@ -225,6 +232,73 @@ button {
   flex-direction: column;
   align-items: center;
   padding: 30px 30px;
+  max-width: 1600px;
+}
+@media (min-width: 768px) {
+  .getStart_wrap {
+    height: 920px;
+  }
+}
+@media (min-width: 1440px) {
+  .getStart_wrap {
+    height: 870px;
+  }
+}
+.getStart_wrap .stage_group {
+  max-width: 1300px;
+}
+.getStart_wrap .stage_group img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .getStart_wrap .stage_group {
+    display: grid;
+    grid-template: "a b" "c d";
+    width: 100%;
+    position: relative;
+  }
+  .getStart_wrap .stage_group img {
+    display: block;
+  }
+  .getStart_wrap .stage_group .gridA {
+    grid-area: "a";
+    max-width: 500px;
+  }
+  .getStart_wrap .stage_group .gridB {
+    grid-area: "b";
+    top: 100px;
+    margin-left: 6vw;
+    max-width: 500px;
+  }
+  .getStart_wrap .stage_group .gridB img {
+    position: relative;
+    right: 50%;
+    top: 20px;
+    z-index: -1;
+  }
+  .getStart_wrap .stage_group .gridC {
+    grid-area: "c";
+    bottom: 40px;
+    max-width: 500px;
+  }
+  .getStart_wrap .stage_group .gridC img {
+    position: relative;
+    left: 50%;
+    top: 20px;
+    z-index: -1;
+  }
+  .getStart_wrap .stage_group .gridD {
+    grid-area: "d";
+    top: 140px;
+    margin-left: 6vw;
+    max-width: 500px;
+  }
+  .getStart_wrap .stage_group .gridD img {
+    position: relative;
+    right: 50%;
+    top: 20px;
+    z-index: -1;
+  }
 }
 @media (min-width: 1440px) {
   .getStart_wrap {
@@ -234,10 +308,11 @@ button {
 
 .stage_wrap {
   margin-top: 20px;
-  width: 280px;
+  max-width: 500px;
   padding: 24px;
   border-radius: 30px;
   border: 2px solid #4f62f6;
+  background-color: white;
 }
 .stage_wrap .stage_number {
   color: #4f62f6;
@@ -252,8 +327,10 @@ button {
 }
 
 .bigInvest_wrap {
+  margin-top: 30px;
   padding: 30px 30px;
   position: relative;
+  max-width: 1600px;
 }
 @media (min-width: 1440px) {
   .bigInvest_wrap {
@@ -315,6 +392,7 @@ button {
 
 .questions_wrap {
   padding: 30px 30px;
+  max-width: 1600px;
 }
 @media (min-width: 1440px) {
   .questions_wrap {
@@ -345,6 +423,7 @@ button {
 .contactUs_wrap {
   padding: 30px 30px;
   background-color: rgb(237, 246, 248);
+  max-width: 1600px;
 }
 @media (min-width: 1440px) {
   .contactUs_wrap {
@@ -417,6 +496,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1600px;
 }
 @media (min-width: 1440px) {
   .footer_wrap {
