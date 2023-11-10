@@ -180,8 +180,8 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 30px;
-  background-color: rgb(237, 246, 248);
+  padding: 30px 20px;
+  background-color: rgba(99, 72, 255, 0.0901960784);
   max-width: 1600px;
 }
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -194,13 +194,24 @@ div {
     padding: 30px 60px;
     flex-direction: row;
   }
-  .welcomePage_wrap .text_group {
-    text-align: left;
+}
+.welcomePage_wrap .text_group {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1439px) {
+  .welcomePage_wrap .text_group button {
+    align-self: center;
+  }
+}
+@media (max-width: 767px) {
+  .welcomePage_wrap h1 {
+    font-size: 40px;
+    line-height: 44px;
   }
 }
 .welcomePage_wrap p {
   margin-top: 30px;
-  font-size: 1.4em;
 }
 @media (min-width: 1440px) {
   .welcomePage_wrap p {
@@ -233,6 +244,9 @@ div {
   align-items: center;
   padding: 30px 30px;
   max-width: 1600px;
+  background-color: aquamarine;
+  height: -moz-min-content;
+  height: min-content;
 }
 @media (min-width: 768px) {
   .getStart_wrap {
@@ -245,7 +259,7 @@ div {
   }
 }
 .getStart_wrap .stage_group {
-  max-width: 1300px;
+  max-width: 1090px;
 }
 .getStart_wrap .stage_group img {
   display: none;
@@ -254,6 +268,7 @@ div {
   .getStart_wrap .stage_group {
     display: grid;
     grid-template: "a b" "c d";
+    grid-column-gap: 6vw;
     width: 100%;
     position: relative;
   }
@@ -262,13 +277,10 @@ div {
   }
   .getStart_wrap .stage_group .gridA {
     grid-area: "a";
-    max-width: 500px;
   }
   .getStart_wrap .stage_group .gridB {
     grid-area: "b";
     top: 100px;
-    margin-left: 6vw;
-    max-width: 500px;
   }
   .getStart_wrap .stage_group .gridB img {
     position: relative;
@@ -279,7 +291,6 @@ div {
   .getStart_wrap .stage_group .gridC {
     grid-area: "c";
     bottom: 40px;
-    max-width: 500px;
   }
   .getStart_wrap .stage_group .gridC img {
     position: relative;
@@ -290,8 +301,6 @@ div {
   .getStart_wrap .stage_group .gridD {
     grid-area: "d";
     top: 140px;
-    margin-left: 6vw;
-    max-width: 500px;
   }
   .getStart_wrap .stage_group .gridD img {
     position: relative;
@@ -339,10 +348,10 @@ div {
 }
 .bigInvest_wrap .investBG {
   position: absolute;
-  top: 95px;
-  width: 300px;
+  top: 75px;
+  width: 250px;
   height: 50px;
-  background-color: rgb(237, 246, 248);
+  background-color: rgba(99, 72, 255, 0.0901960784);
   z-index: -1;
 }
 .bigInvest_wrap h1 {
@@ -363,7 +372,7 @@ div {
   padding: 14px;
 }
 .bigInvest_wrap .cardDisplayed_number {
-  color: rgb(237, 246, 248);
+  color: #4f62f6;
 }
 
 .feedbackCard_wrap {
@@ -422,7 +431,7 @@ div {
 
 .contactUs_wrap {
   padding: 30px 30px;
-  background-color: rgb(237, 246, 248);
+  background-color: rgba(99, 72, 255, 0.0901960784);
   max-width: 1600px;
 }
 @media (min-width: 1440px) {
@@ -530,6 +539,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .footer_wrap .copyrightsGroup a {
   margin-top: 30px;

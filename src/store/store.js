@@ -10,7 +10,7 @@ export const useStore = create((set, get) => ({
       name: "Albert Abello",
       position: "Director of Growth",
       feedback:
-        "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market.",
+        "Unbelievable results! Thanks to this trading company, our portfolio is not just growing, it's doing a victory dance. They've cracked the code to success in the market, and we're reaping the rewards. Solid performance and excellent service",
       photo: alberto,
     },
     {

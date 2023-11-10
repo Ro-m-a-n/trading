@@ -6,11 +6,23 @@ import { useState } from "react";
 
 export const BigInvest = () => {
   const feedback = useStore((state) => state.feedback);
-  const [currentFeedback, setCurrentFeedback] = useState(feedback[1]);
-  const totalSlides = feedback.length;
-  const currentSlideNumber = currentFeedback.id;
+  const [currentId, setCurrentId] = useState(2);
+  const currentFeedback = feedback.find((item) => item.id === currentId);
+
   const currentStatus = () => {
-    return "0" + currentSlideNumber + "/0" + totalSlides;
+    return "0" + currentId + "/0" + feedback.length;
+  };
+  const nextFeedback = () => {
+    if (currentId < feedback.length) {
+      return setCurrentId((prevState) => prevState + 1);
+    }
+    return setCurrentId(1);
+  };
+  const prevFeedback = () => {
+    if (currentId === 1) {
+      return setCurrentId(feedback.length);
+    }
+    return setCurrentId((prevState) => prevState - 1);
   };
   return (
     <div className="bigInvest_wrap">
@@ -23,9 +35,15 @@ export const BigInvest = () => {
         feedback={currentFeedback.feedback}
       />
       <div className="cardNavigation">
-        <LiaLessThanSolid className="icon_navigation" />
+        <LiaLessThanSolid
+          className="icon_navigation"
+          onClick={() => prevFeedback()}
+        />
         <div className="cardDisplayed_number">{currentStatus()}</div>
-        <LiaGreaterThanSolid className="icon_navigation" />
+        <LiaGreaterThanSolid
+          className="icon_navigation"
+          onClick={() => nextFeedback()}
+        />
       </div>
     </div>
   );

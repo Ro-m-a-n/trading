@@ -1,31 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Nunito+Sans&display=swap");
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("./assets/fonts/MuseoSansCyrl500.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Museo Sans Cyrl";
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+    line-height: 44px;
   }
 }
-body{
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+body {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -6,7 +6,8 @@
   align-items: center;
   padding: 30px 30px;
   max-width: 1600px;
-
+  background-color: aquamarine;
+  height: min-content;
   @include media(">=tablet") {
     height: 920px;
   }
@@ -14,7 +15,7 @@
     height: 870px;
   }
   .stage_group {
-    max-width: 1300px;
+    max-width: 1090px;
     img {
       display: none;
     }
@@ -26,17 +27,16 @@
       grid-template:
         "a b"
         "c d";
+      grid-column-gap: 6vw;
       width: 100%;
       position: relative;
       .gridA {
         grid-area: "a";
-        max-width: 500px;
       }
       .gridB {
         grid-area: "b";
         top: 100px;
-        margin-left: 6vw;
-        max-width: 500px;
+
         img {
           position: relative;
           right: 50%;
@@ -47,7 +47,6 @@
       .gridC {
         grid-area: "c";
         bottom: 40px;
-        max-width: 500px;
 
         img {
           position: relative;
@@ -59,8 +58,6 @@
       .gridD {
         grid-area: "d";
         top: 140px;
-        margin-left: 6vw;
-        max-width: 500px;
 
         img {
           position: relative;

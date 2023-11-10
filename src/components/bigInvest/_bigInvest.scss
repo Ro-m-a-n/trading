@@ -10,8 +10,8 @@
   }
   .investBG {
     position: absolute;
-    top: 95px;
-    width: 300px;
+    top: 75px;
+    width: 250px;
     height: 50px;
     background-color: $color4;
     z-index: -1;
@@ -35,6 +35,6 @@
     padding: 14px;
   }
   .cardDisplayed_number {
-    color: $color4;
+    color: $color1;
   }
 }
