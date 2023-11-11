@@ -47,6 +47,15 @@
     box-sizing: content-box;
     padding: 14px;
     position: absolute;
+
+    &:hover {
+      border-color: $color1;
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $color4;
+    }
+
     &.left {
       bottom: -40px;
       left: 30px;

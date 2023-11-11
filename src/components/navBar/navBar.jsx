@@ -1,24 +1,33 @@
 import { useState } from "react";
 import navBarLogo from "../../assets/navBar/Architect.svg";
 import { BiMenu } from "react-icons/bi";
+import { BsChevronDown } from "react-icons/bs";
 export const NavBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const menuLinks = () => {
     return (
       <div className="menu_links">
-        <a href="#questions">How it works</a>
-        <a href="#" onClick={() => location.reload()}>
-          About
-        </a>
-        <a href="#getStart">Instructions</a>
-        <a href="#" onClick={() => location.reload()}>
-          Accounts
+        <a href="#questions">
+          <h4>How it works</h4>
         </a>
         <a href="#" onClick={() => location.reload()}>
-          Platforms
+          <h4>About</h4>
         </a>
-        <a href="#contactUs">Contacts</a>
-        <button>En</button>
+        <a href="#getStart">
+          <h4>Instructions</h4>
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4>Accounts</h4>
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4>Platforms</h4>
+        </a>
+        <a href="#contactUs">
+          <h4>Contacts</h4>
+        </a>
+        <button className="language">
+          En <BsChevronDown className="arrowdown" />
+        </button>
       </div>
     );
   };

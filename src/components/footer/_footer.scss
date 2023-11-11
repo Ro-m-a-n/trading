@@ -22,6 +22,7 @@
   img {
     width: 90px;
     align-self: center;
+
     @include media(">=desktop") {
       align-self: auto;
     }

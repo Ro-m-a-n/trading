@@ -50,3 +50,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+div {
+  position: inherit;
+}
+button:hover {
+  cursor: pointer;
+}

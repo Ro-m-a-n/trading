@@ -11,12 +11,14 @@
     justify-content: space-between;
     align-items: center;
   }
-  .toOpen {
-    height: 32px;
-    width: 32px;
-  }
+  .toOpen,
   .toClose {
     height: 32px;
     width: 32px;
+    transition: 0.08s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
   }
 }

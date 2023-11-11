@@ -79,10 +79,6 @@ button {
   border: none;
 }
 
-div {
-  position: inherit;
-}
-
 .navBar_wrap {
   display: flex;
   align-items: center;
@@ -99,6 +95,9 @@ div {
 }
 .navBar_wrap .logo {
   width: 90px;
+}
+.navBar_wrap .logo:hover {
+  cursor: pointer;
 }
 .navBar_wrap .buttonsMenu_group {
   display: flex;
@@ -126,11 +125,32 @@ div {
   margin-left: 40px;
   height: 30px;
   width: auto;
+  transition: 0.08s;
+}
+.navBar_wrap .buttonsMenu_group .burger:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 @media (min-width: 1440px) {
   .navBar_wrap .buttonsMenu_group .burger {
     display: none;
   }
+}
+.navBar_wrap .menu_links {
+  display: flex;
+}
+.navBar_wrap .menu_links .language {
+  color: #333333;
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .navBar_wrap .desktopMenu {
   display: none;
@@ -143,7 +163,8 @@ div {
   }
   .navBar_wrap .desktopMenu button {
     position: absolute;
-    right: 50px;
+    right: 30px;
+    top: -8px;
   }
 }
 .navBar_wrap .mobileMenu {
@@ -181,6 +202,11 @@ div {
 }
 .navBar_wrap a {
   color: white;
+  transition: 0.08s;
+}
+.navBar_wrap a:hover {
+  color: #7181fc;
+  transform: scale(1.05);
 }
 @media (min-width: 1440px) {
   .navBar_wrap a {
@@ -442,6 +468,13 @@ div {
   padding: 14px;
   position: absolute;
 }
+.bigInvest_wrap .navigation_icon:hover {
+  border-color: #4f62f6;
+  cursor: pointer;
+}
+.bigInvest_wrap .navigation_icon:active {
+  background-color: rgba(99, 72, 255, 0.0901960784);
+}
 .bigInvest_wrap .navigation_icon.left {
   bottom: -40px;
   left: 30px;
@@ -594,13 +627,16 @@ div {
   justify-content: space-between;
   align-items: center;
 }
-.questionCard_wrap .toOpen {
-  height: 32px;
-  width: 32px;
-}
+.questionCard_wrap .toOpen,
 .questionCard_wrap .toClose {
   height: 32px;
   width: 32px;
+  transition: 0.08s;
+}
+.questionCard_wrap .toOpen:hover,
+.questionCard_wrap .toClose:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .contactUs_wrap {
@@ -659,6 +695,7 @@ div {
 }
 .form_wrap button:hover {
   background-color: #7181fc;
+  cursor: pointer;
 }
 .form_wrap button:active {
   background-color: #354bf4;
@@ -666,6 +703,7 @@ div {
 .form_wrap button:disabled {
   color: #828282;
   background-color: #e0e0e0;
+  cursor: auto;
 }
 .form_wrap .input_wrap,
 .form_wrap .textarea_wrap {

@@ -24,6 +24,7 @@
 
     &:hover {
       background-color: $color8;
+      cursor: pointer;
     }
 
     &:active {
@@ -32,6 +33,7 @@
     &:disabled {
       color: $color10;
       background-color: $color6;
+      cursor: auto;
     }
   }
   .input_wrap,

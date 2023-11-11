@@ -15,6 +15,9 @@
 
   .logo {
     width: 90px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .buttonsMenu_group {
     display: flex;
@@ -33,11 +36,34 @@
       margin-left: 40px;
       height: 30px;
       width: auto;
+      transition: 0.08s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
       @include media(">=desktop") {
         display: none;
       }
     }
   }
+  .menu_links {
+    display: flex;
+
+    .language {
+      color: $color2;
+      width: 80px;
+      height: 40px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: $color11;
+      border: 1px solid $color2;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+
   .desktopMenu {
     display: none;
     @include media(">=desktop") {
@@ -46,7 +72,8 @@
       width: 100%;
       button {
         position: absolute;
-        right: 50px;
+        right: 30px;
+        top: -8px;
       }
     }
   }
@@ -84,6 +111,11 @@
   }
   a {
     color: $color11;
+    transition: 0.08s;
+    &:hover {
+      color: $color8;
+      transform: scale(1.05);
+    }
     @include media(">=desktop") {
       color: $color2;
       margin-left: 40px;
