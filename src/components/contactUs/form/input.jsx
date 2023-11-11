@@ -6,6 +6,7 @@ const Input = ({
   onBlur,
   error,
   touched,
+  autocomplete
 }) => {
   return (
     <div className="input_wrap">
@@ -17,6 +18,7 @@ const Input = ({
         onChange={onChange}
         name={name}
         onBlur={onBlur}
+        autoComplete={autocomplete}
         style={{
           borderColor: touched && (error ? "red" : "green"),
         }}

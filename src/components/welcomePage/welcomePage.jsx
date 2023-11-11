@@ -1,4 +1,5 @@
 import welcomePageImage from "../../assets/welcomePage/welcomePage.png";
+
 export const WelcomePage = () => {
   return (
     <div className="welcomePage_wrap">
@@ -9,7 +10,7 @@ export const WelcomePage = () => {
           MetaTrader4 is the most popular and convenient platform for access to
           global exchanges. You can work anywhere.
         </p>
-        <button> START TRADING</button>
+        <button onClick={() => location.reload()}>START TRADING</button>
       </div>
 
       <img className="welcomePage_img" src={welcomePageImage}></img>

@@ -36,17 +36,26 @@
   }
   p {
     margin-top: 30px;
-    @include media(">=desktop") {
+    @include media(">=tablet") {
       width: 60%;
     }
   }
   button {
     @include button(280px);
+    &:hover {
+      background-color: $color8;
+    }
+    &:active {
+      background-color: $color7;
+    }
   }
   img {
     margin-top: 50px;
     @include media(">=desktop") {
       margin: 50px;
     }
+  }
+  .animate__pulse {
+    z-index: -100;
   }
 }

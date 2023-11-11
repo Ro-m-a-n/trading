@@ -6,6 +6,7 @@ const Textarea = ({
   onBlur,
   error,
   touched,
+  autocomplete,
 }) => {
   return (
     <div className="textarea_wrap">
@@ -17,6 +18,7 @@ const Textarea = ({
         onChange={onChange}
         name={name}
         onBlur={onBlur}
+        autoComplete={autocomplete}
         style={{
           borderColor: touched && (error ? "red" : "green"),
         }}

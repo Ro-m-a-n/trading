@@ -2,6 +2,7 @@ import { useState } from "react";
 import navBarLogo from "../../assets/navBar/Architect.svg";
 import { BiMenu } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
+import "animate.css";
 export const NavBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const menuLinks = () => {
@@ -47,7 +48,11 @@ export const NavBar = () => {
         <BiMenu className="burger" onClick={() => setIsOpenMenu(!isOpenMenu)} />
       </div>
 
-      {isOpenMenu && <div className="mobileMenu">{menuLinks()}</div>}
+      {isOpenMenu && (
+        <div className="mobileMenu  animate__animated animate__fadeIn">
+          {menuLinks()}
+        </div>
+      )}
     </div>
   );
 };

@@ -30,6 +30,7 @@ export const Form = () => {
         placeholder={"Name"}
         error={errors.name}
         touched={touched.name}
+        autocomplete="username"
         {...getFieldProps("name")}
       />
 
@@ -38,6 +39,7 @@ export const Form = () => {
         placeholder={"Email"}
         error={errors.email}
         touched={touched.email}
+        autocomplete="email"
         {...getFieldProps("email")}
       />
 
@@ -46,6 +48,7 @@ export const Form = () => {
         placeholder={"Message"}
         error={errors.message}
         touched={touched.message}
+        autocomplete="off"
         {...getFieldProps("message")}
       />
 

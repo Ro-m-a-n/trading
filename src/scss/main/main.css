@@ -116,6 +116,12 @@ button {
   font-size: 14px;
   display: none;
 }
+.navBar_wrap .buttonsMenu_group .signUp_button:hover {
+  background-color: #7181fc;
+}
+.navBar_wrap .buttonsMenu_group .signUp_button:active {
+  background-color: #354bf4;
+}
 @media (min-width: 768px) {
   .navBar_wrap .buttonsMenu_group .signUp_button {
     display: block;
@@ -151,6 +157,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.navBar_wrap .menu_links .language:hover {
+  border-color: #7181fc;
 }
 .navBar_wrap .desktopMenu {
   display: none;
@@ -259,7 +268,7 @@ button {
 .welcomePage_wrap p {
   margin-top: 30px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .welcomePage_wrap p {
     width: 60%;
   }
@@ -274,6 +283,12 @@ button {
   font-size: 16px;
   font-weight: 500;
 }
+.welcomePage_wrap button:hover {
+  background-color: #7181fc;
+}
+.welcomePage_wrap button:active {
+  background-color: #354bf4;
+}
 .welcomePage_wrap img {
   margin-top: 50px;
 }
@@ -281,6 +296,9 @@ button {
   .welcomePage_wrap img {
     margin: 50px;
   }
+}
+.welcomePage_wrap .animate__pulse {
+  z-index: -100;
 }
 
 .getStart_wrap {

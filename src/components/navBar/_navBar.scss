@@ -28,6 +28,12 @@
       @include button(167px, 40px, 0);
       font-size: 14px;
       display: none;
+      &:hover {
+        background-color: $color8;
+      }
+      &:active {
+        background-color: $color7;
+      }
       @include media(">=tablet") {
         display: block;
       }
@@ -61,6 +67,9 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      &:hover {
+        border-color: $color8;
+      }
     }
   }
 
@@ -86,6 +95,7 @@
     height: calc(100vh - 80px);
     min-height: 400px;
     max-height: 1000px;
+
     &::after {
       content: "";
       width: 100%;
