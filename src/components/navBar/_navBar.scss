@@ -57,13 +57,25 @@
     top: 80px;
     left: 0;
     height: calc(100vh - 80px);
+    min-height: 400px;
+    max-height: 1000px;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 20px;
+      background: linear-gradient($color12, transparent);
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+    }
+
     @include media(">=desktop") {
       display: none;
     }
     .menu_links {
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: $color12;
       display: flex;
       flex-direction: column;
       align-items: center;

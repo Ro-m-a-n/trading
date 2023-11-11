@@ -1,7 +1,5 @@
 import { useFormik } from "formik";
 import { validate } from "./validation";
-import Input from "./input";
-import Textarea from "./textarea";
 
 export const Form = () => {
   const formik = useFormik({
@@ -25,29 +23,40 @@ export const Form = () => {
     formik;
   return (
     <form onSubmit={handleSubmit} className="form_wrap" id="login-form">
-      <Input
+      <input
         name="name"
         placeholder={"Name"}
-        error={errors.name}
-        touched={touched.name}
+        style={{
+          borderColor: touched.name && (errors.name ? "red" : "green"),
+        }}
         {...getFieldProps("name")}
       />
-
-      <Input
+      {errors.name && touched.name && (
+        <div className="text_error">{errors.name}</div>
+      )}
+      <input
         name="email"
         placeholder={"Email"}
-        error={errors.email}
-        touched={touched.email}
+        type="email"
+        style={{
+          borderColor: touched.email && (errors.email ? "red" : "green"),
+        }}
         {...getFieldProps("email")}
       />
-
-      <Textarea
+      {errors.email && touched.email && (
+        <div className="text_error">{errors.email}</div>
+      )}
+      <textarea
         name="message"
         placeholder={"Message"}
-        error={errors.message}
-        touched={touched.message}
+        style={{
+          borderColor: touched.message && (errors.message ? "red" : "green"),
+        }}
         {...getFieldProps("message")}
       />
+      {errors.message && touched.message && (
+        <div className="text_error">{errors.message}</div>
+      )}
 
       <button
         type="submit"

@@ -153,6 +153,17 @@ div {
   top: 80px;
   left: 0;
   height: calc(100vh - 80px);
+  min-height: 400px;
+  max-height: 1000px;
+}
+.navBar_wrap .mobileMenu::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), transparent);
+  position: absolute;
+  bottom: -19px;
+  left: 0;
 }
 @media (min-width: 1440px) {
   .navBar_wrap .mobileMenu {
@@ -620,10 +631,11 @@ div {
   padding: 10px 20px 30px 20px;
   border: 2px solid #4f62f6;
   border-radius: 15px;
+  margin: auto;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
 }
 @media (min-width: 1440px) {
   .form_wrap {
@@ -652,8 +664,15 @@ div {
   color: #828282;
   background-color: #e0e0e0;
 }
-.form_wrap input,
-.form_wrap textarea {
+.form_wrap .input_wrap,
+.form_wrap .textarea_wrap {
+  width: 100%;
+  position: relative;
+}
+.form_wrap .input_wrap input,
+.form_wrap .input_wrap textarea,
+.form_wrap .textarea_wrap input,
+.form_wrap .textarea_wrap textarea {
   margin-top: 30px;
   width: 100%;
   height: 45px;
@@ -661,23 +680,33 @@ div {
   border: 1px solid #e0e0e0;
   padding: 10px 15px;
 }
-.form_wrap input:focus,
-.form_wrap textarea:focus {
+.form_wrap .input_wrap input:focus,
+.form_wrap .input_wrap textarea:focus,
+.form_wrap .textarea_wrap input:focus,
+.form_wrap .textarea_wrap textarea:focus {
   outline: none;
   border-color: black !important;
 }
-.form_wrap input::-moz-placeholder, .form_wrap textarea::-moz-placeholder {
+.form_wrap .input_wrap input::-moz-placeholder, .form_wrap .input_wrap textarea::-moz-placeholder, .form_wrap .textarea_wrap input::-moz-placeholder, .form_wrap .textarea_wrap textarea::-moz-placeholder {
   color: rgb(170, 170, 170);
 }
-.form_wrap input::placeholder,
-.form_wrap textarea::placeholder {
+.form_wrap .input_wrap input::placeholder,
+.form_wrap .input_wrap textarea::placeholder,
+.form_wrap .textarea_wrap input::placeholder,
+.form_wrap .textarea_wrap textarea::placeholder {
   color: rgb(170, 170, 170);
 }
-.form_wrap textarea {
+.form_wrap .input_wrap textarea,
+.form_wrap .textarea_wrap textarea {
   height: 80px;
 }
-.form_wrap .text_error {
+.form_wrap .input_wrap .text_error,
+.form_wrap .textarea_wrap .text_error {
+  position: absolute;
+  bottom: -20px;
   color: red;
+  font-size: 15px;
+  line-height: 16px;
 }
 
 .footer_wrap {
