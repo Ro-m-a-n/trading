@@ -1,13 +1,22 @@
 @import "../../scss/global/colors";
 @import "../../scss/global/brakepoints";
 .contactUs_wrap {
-  padding: 30px 30px;
+  margin-top: 70px;
+  padding: 70px 30px;
   background-color: $color4;
   max-width: 1600px;
   @include media(">=desktop") {
-    padding: 30px 60px;
+    padding: 70px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  h4 {
-    margin-top: 15px;
+  .textInformation {
+    @include media(">=desktop"){
+      max-width: 480px;
+    }
+    h4 {
+      margin-top: 15px;
+    }
   }
 }

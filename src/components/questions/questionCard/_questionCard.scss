@@ -1,9 +1,11 @@
 @import "../../../scss/global/colors";
 .questionCard_wrap {
+  margin: auto;
   margin-top: 20px;
   padding: 24px;
   border-radius: 15px;
   border: 2px solid $color1;
+  max-width: 1000px;
   .question {
     display: flex;
     justify-content: space-between;

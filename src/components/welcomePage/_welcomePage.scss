@@ -19,6 +19,9 @@
   .text_group {
     display: flex;
     flex-direction: column;
+    @include media(">=tablet", "<desktop") {
+      align-items: center;
+    }
     button {
       @include media("<desktop") {
         align-self: center;
@@ -26,9 +29,9 @@
     }
   }
   h1 {
-    @include media("<tablet") {
-      font-size: 40px;
-      line-height: 44px;
+    max-width: 400px;
+    @include media(">=tablet") {
+      max-width: 550px;
     }
   }
   p {

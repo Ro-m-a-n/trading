@@ -1,9 +1,35 @@
 @import "../../scss/global/brakepoints";
+@import "../../scss/global/colors";
 .questions_wrap {
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 30px 30px;
   max-width: 1600px;
   @include media(">=desktop") {
     padding: 30px 60px;
+  }
+  h1 {
+    max-width: 400px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 220px;
+      height: 50px;
+      background-color: $color4;
+      z-index: -1;
+      position: absolute;
+      left: -5px;
+      top: 48px;
+    }
+    @include media(">=tablet") {
+      max-width: 500px;
+      &:after {
+        width: 350px;
+        height: 75px;
+        top: 75px;
+      }
+    }
+  }
+  div:nth-child(2) {
+    margin-top: 60px;
   }
 }
