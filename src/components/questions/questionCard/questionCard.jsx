@@ -19,7 +19,11 @@ export const QuestionCard = (props) => {
           />
         )}
       </div>
-      {isCurrentCard ? <p className="answer animate__animated animate__fadeIn">{props.answer}</p> : null}
+      {isCurrentCard ? (
+        <p className="answer animate__animated animate__fadeIn animate__faster">
+          {props.answer}
+        </p>
+      ) : null}
     </div>
   );
 };
