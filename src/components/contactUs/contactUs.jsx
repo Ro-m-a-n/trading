@@ -2,7 +2,7 @@ import { Form } from "./form/form";
 
 export const ContactUs = (props) => {
   return (
-    <div className="contactUs_wrap">
+    <div className="contactUs_wrap" id="contactUs">
       <div className="textInformation">
         <h1>Contact Us!</h1>
         <br />

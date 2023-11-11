@@ -12,7 +12,7 @@
     justify-content: space-between;
   }
   .textInformation {
-    @include media(">=desktop"){
+    @include media(">=desktop") {
       max-width: 480px;
     }
     h4 {

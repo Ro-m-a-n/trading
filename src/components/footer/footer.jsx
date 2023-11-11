@@ -1,15 +1,28 @@
 import logo from "../../assets/navBar/Architect.svg";
-export const Footer = (props) => {
+
+export const Footer = () => {
   return (
     <div className="footer_wrap">
       <img src={logo} alt="logo" />
       <div className="linksGroup">
-        <a href="#">About us</a>
-        <a href="#">Instructions</a>
-        <a href="#">Platform</a>
-        <a href="#">Contact us</a>
-        <a href="#">Sing in</a>
-        <a href="#">Sing up for free</a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4>About us</h4>
+        </a>
+        <a href="#getStart">
+          <h4>Instructions</h4>
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4>Platform</h4>
+        </a>
+        <a href="#contactUs">
+          <h4>Contact us</h4>
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4>Sing in</h4>
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          <h4> Sing up for free</h4>
+        </a>
       </div>
       <div className="infoText">
         <h3>Informationand high risk warning:</h3>
@@ -35,11 +48,21 @@ export const Footer = (props) => {
         </p>
       </div>
       <div className="copyrightsGroup">
-        <a href="#">Copyright 2020, All Right Reserved</a>
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Risk Warnings</a>
-        <a href="#">Anti-Money Laundering</a>
+        <a href="#" onClick={() => location.reload()}>
+          Copyright 2020, All Right Reserved
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          Terms and Conditions
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          Privacy Policy
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          Risk Warnings
+        </a>
+        <a href="#" onClick={() => location.reload()}>
+          Anti-Money Laundering
+        </a>
       </div>
     </div>
   );

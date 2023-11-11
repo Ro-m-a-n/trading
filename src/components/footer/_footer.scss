@@ -5,38 +5,84 @@
   padding: 30px 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1600px;
+  position: relative;
+  @include media(">=tablet") {
+    text-align: center;
+    align-items: center;
+  }
   @include media(">=desktop") {
     padding: 30px 60px;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    height: 570px;
   }
   img {
     width: 90px;
+    align-self: center;
+    @include media(">=desktop") {
+      align-self: auto;
+    }
   }
   .linksGroup {
-    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: left;
+
+    @include media(">=tablet", "<desktop") {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include media(">=desktop") {
+      position: absolute;
+      right: 70px;
+    }
+
     a {
       font-size: 15px;
       font-weight: 500;
       margin-top: 30px;
     }
   }
-  .infoText,
-  .disclaimer {
+
+  .infoText {
     margin-top: 30px;
-    p {
+    @include media(">=desktop") {
+      position: absolute;
+      left: 310px;
+      max-width: 380px;
       margin-top: 20px;
     }
+  }
+  .disclaimer {
+    margin-top: 30px;
+    @include media(">=desktop") {
+      position: absolute;
+      right: 310px;
+      max-width: 380px;
+      margin-top: 20px;
+    }
+  }
+  p {
+    margin-top: 20px;
   }
   .copyrightsGroup {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     text-align: center;
+    @include media(">=desktop") {
+      width: calc(100% - 120px);
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 40px;
+    }
     a {
       margin-top: 30px;
       color: $color10;

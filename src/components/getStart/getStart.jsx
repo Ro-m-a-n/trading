@@ -3,7 +3,7 @@ import vectorL from "../../assets/getStart/vectorL.png";
 import vectorR from "../../assets/getStart/vectorR.png";
 export const GetStart = () => {
   return (
-    <div className="getStart_wrap">
+    <div className="getStart_wrap" id="getStart">
       <h1>Getting Started Is Fast & Easy</h1>
 
       <div className="stage_group">

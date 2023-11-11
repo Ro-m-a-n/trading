@@ -24,7 +24,7 @@ export const Form = () => {
   const { handleSubmit, errors, touched, getFieldProps, values, isValid } =
     formik;
   return (
-    <form onSubmit={handleSubmit} className="form_wrap" id="login-form">
+    <form onSubmit={handleSubmit} className="form_wrap">
       <Input
         name="name"
         placeholder={"Name"}

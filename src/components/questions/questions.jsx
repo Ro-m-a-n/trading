@@ -19,7 +19,7 @@ export const Questions = () => {
   });
 
   return (
-    <div className="questions_wrap">
+    <div className="questions_wrap" id="questions">
       <h1>Frequently asked questions</h1>
       {questionCards}
     </div>
