@@ -25,7 +25,7 @@ export const NavBar = () => {
         <BiMenu className="burger" onClick={() => setIsOpenMenu(!isOpenMenu)} />
       </div>
 
-      {isOpenMenu && <MobileMenu />}
+      {isOpenMenu && <MobileMenu setIsOpenMenu={setIsOpenMenu} />}
     </div>
   );
 };

@@ -1,15 +1,15 @@
 import { BsChevronDown } from "react-icons/bs";
 
-export const MenuLinks = () => {
+export const MenuLinks = (props) => {
   return (
     <div className="menu_links">
-      <a href="#questions">
+      <a href="#questions" onClick={() => props.setIsOpenMenu(false)}>
         <h4>How it works</h4>
       </a>
       <a href="#" onClick={() => location.reload()}>
         <h4>About</h4>
       </a>
-      <a href="#getStart">
+      <a href="#getStart" onClick={() => props.setIsOpenMenu(false)}>
         <h4>Instructions</h4>
       </a>
       <a href="#" onClick={() => location.reload()}>
@@ -18,7 +18,7 @@ export const MenuLinks = () => {
       <a href="#" onClick={() => location.reload()}>
         <h4>Platforms</h4>
       </a>
-      <a href="#contactUs">
+      <a href="#contactUs" onClick={() => props.setIsOpenMenu(false)}>
         <h4>Contacts</h4>
       </a>
       <button className="language">
